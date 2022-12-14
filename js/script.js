@@ -1,4 +1,7 @@
 
+function playGame(playerInput){
+    clearMessages();
+    
 function getMoveName(argMoveId){
     if(argMoveId == 1){
       return 'камнем';
@@ -27,11 +30,12 @@ if(randomNumber == 2){
 if(randomNumber == 3){
     computerMove = 'ножницы';
   }*/  
-let playerInput = prompt('Выбирай свой ход! 1: камень, 2: бумага, 3: ножницы.');
+/*let playerInput = prompt('Выбирай свой ход! 1: камень, 2: бумага, 3: ножницы.');*/
 
 console.log('Игрок вписал: ' + playerInput);
 
 let playerMove = getMoveName(playerInput);
+
 
 /*if(playerInput == '1'){
   playerMove = 'камень';
@@ -78,6 +82,16 @@ if(playerInput == '2'){
 
 
 let result = displayResult(computerMove, playerMove);
+}
+document.getElementById('play-rock').addEventListener('click', function(){
+    playGame(1);
+  });
+document.getElementById('play-paper').addEventListener('click', function(){
+    playGame(2);
+  });
+document.getElementById('play-scissors').addEventListener('click', function(){
+    playGame(3);
+  });
 
 /*printMessage('Твой ход - это: ' + playerMove);
 
