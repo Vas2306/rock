@@ -8,7 +8,6 @@ function printMessage(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
-let computerMove = 'камнем';
-let playerMove = 'бумагой';
 
-printMessage('Я играл ' + computerMove + ' ! Если Ваш ход - бумага, Вы выиграли!');
+
+
